@@ -1,0 +1,258 @@
+\documentclass{beamer}
+
+%% seleções de localização de idoma
+\usepackage[portuges]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx} % Enable the use of graphs
+\usepackage{amsfonts} % Enable special mathemtical characters.
+\usepackage{amsmath}  % Enable the use  Multi-line equations, compound symbols, etc
+\usepackage{booktabs} % More complex tables
+\usepackage{hyperref} % Links
+\usepackage{subfig}   % Subfigures
+
+\DeclareOptionBeamer{compress}{\beamer@compresstrue}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
+\useoutertheme[footline=authorinstitutetitle]{miniframes}
+
+% A little hack to display frame counter:
+\defbeamertemplate*{footline}{Idorobots theme}
+{%
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+    leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+    \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+    \hfill%
+    {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+    leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+    {\usebeamerfont{title in head/foot}\insertshorttitle}%
+    \hfill%
+    {\usebeamerfont{title in head/foot}\insertframenumber/\inserttotalframenumber}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+  \end{beamercolorbox}
+}
+
+
+\useinnertheme{circles}
+\usecolortheme{whale}
+
+\definecolor{idocolor}{rgb}{0.2,0.44,0.74}
+
+\setbeamercolor{structure}{fg=idocolor}
+\setbeamercolor{titlelike}{parent=structure}
+\setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{item}{fg=black}
+
+\mode<all>
+
+
+
+\begin{document}
+\subtitle{Desenvolvimento Avançado de Software (206601)}   
+\title{Recepção e Programa}
+\author{Fabricio Braz} 
+\date{} 
+
+\frame{\titlepage} 
+
+%\frame{\frametitle{Table of contents}\tableofcontents} 
+
+	\begin{frame}
+		\frametitle{Confiança}
+		\begin{itemize}
+			\item Quem sou eu?
+			\item Onde quero chegar?
+			\item Qual o papel da sua graduação?
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{Objetivo}
+		\begin{itemize}
+			\item Introduzi-los à técnicas e conceitos avançados de projeto e codificação de software.
+		\end{itemize}
+	\end{frame}
+	
+	
+		\begin{frame}
+		\frametitle{Conteúdo Programático}
+			\begin{itemize}
+				\item Refatoração
+					\begin{itemize}
+						\item contexto, princípios, situações oportunas e o catálogo de refatorações.
+					\end{itemize}
+				\item Desenvolvimento Orientado a Testes (TDD)
+					\begin{itemize}
+						\item introdução, TDD vs. teste tradicional e prática de TDD.
+					\end{itemize}
+				\item Reuso de software
+					\begin{itemize}
+						\item vantagens e obstáculos, características e fatores de sucesso.
+					\end{itemize}
+				\item Técnicas de reuso
+					\begin{itemize}
+						\item padrões de projeto, componentes e modelos de componentes.
+					\end{itemize}
+				\item Frameworks
+					\begin{itemize}
+						\item tipos, vantagens e desvantagens, construção de frameworks.
+					\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+		\begin{frame}
+		\frametitle{Pré-requisitos}
+		\begin{itemize}
+			\item Orientação a objetos (Java / C++)
+			\item Padrões de Projeto (GoF / POSA)
+			\item Teste unitário
+		\end{itemize}
+	\end{frame}
+
+		\begin{frame}
+		\frametitle{Método de Ensino}
+		\begin{itemize}
+			\item 	Os conteúdos são apresentados por aulas expositivas, que podem envolver práticas de laboratório.
+A avaliação do progresso do aluno no conteúdo contemplado pela disciplina é obtida a partir de 
+provas envolvendo questões teóricas e práticas.
+
+			\item Para ser aprovado na disciplina, o aluno deverá obter avaliação mínima MM e comparecer em pelo 
+menos 75\% das aulas.
+
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}
+	\frametitle{Bibliografia}
+\begin{itemize}
+	\item Refactoring: Improving the Design of Existing Code. Fowler M., Beck K., Brant, J. 1a
+edição, Addison-Wesley, 1999.
+	\item Test-Driven Development By Example. Kent Beck. 4a edição, Bookman, 2000.
+	\item Padrões de projeto. Gamma, E., Helm, R., Johnson R., Vlissides J. Bookman, 2000.
+	\item C.R.U.I.S.E - Component Reuse in Software Engineering. Almeida, E., Álvaro, A.,
+Cardoso, V., Mascena J., Burégio, V., Nascimento, L., Lucrédio, D., Meira, S. 1a edi-
+ção, Cesar e-books, 2007.
+
+\end{itemize}
+\end{frame}
+
+
+	\begin{frame}
+	\frametitle{Programação}
+	
+\begin{table}[htbp]
+\begin{tabular}{|r|r|l|}
+\hline
+\multicolumn{1}{|c|}{Aula} & \multicolumn{1}{c|}{Data} & Assunto \\ \hline
+1 & 11/03/14 & \shortstack[l]{Recepção \& Programa\\Revisão de Orientação a Objetos} \\ \hline
+2 & 13/03/14 & Introdução a testes unitários com Junit \\ \hline
+3 & 18/03/14 & \shortstack[l]{Introdução à refatoração \\Princípios em refatoração \\Oportunidades em refatoração} \\ \hline
+4 & 20/03/14 & Composição de métodos \\ \hline
+5 & 25/03/14 & Movendo características entre objetos \\ \hline
+6 & 27/03/14 & Organizando dados \\ \hline
+7 & 01/04/14 & Simplificando expressões condicionais. \\ \hline
+8 & 03/04/14 & Fazendo as chamadas de métodos mais simples. \\ \hline
+9 & 08/04/14 & Lidando com generalização \\ \hline
+
+
+\end{tabular}
+\label{}
+\end{table}	
+	\end{frame}
+	\begin{frame}
+	\frametitle{Programação}
+	
+\begin{table}[htbp]
+\begin{tabular}{|r|r|l|}
+\hline
+\multicolumn{1}{|c|}{Aula} & \multicolumn{1}{c|}{Data} & Assunto \\ \hline
+10 & 10/04/14 & Avaliação 1 \\ \hline
+11 & 15/04/14 & \shortstack[l]{Introdução ao TDD \\TDD vs. Teste tradicional} \\ \hline
+12 & 17/04/14 & Conduzindo um TDD. \\ \hline
+13 & 22/04/14 & Exercícios de TDD. \\ \hline
+14 & 24/04/14 &  \shortstack[l]{Padrões para TDD:\\ TDD Patterns;\\ red bar patterns;} \\ \hline
+15 & 29/04/14 &  \shortstack[l]{Padrões para TDD: testing patterns.\\ Green Patterns.} \\ \hline
+
+
+
+\end{tabular}
+\label{}
+\end{table}	
+	\end{frame}
+	\begin{frame}
+	\frametitle{Programação}
+	
+\begin{table}[htbp]
+\begin{tabular}{|r|r|l|}
+\hline
+\multicolumn{1}{|c|}{Aula} & \multicolumn{1}{c|}{Data} & Assunto \\ \hline
+16 & 06/05/14 & \shortstack[l]{Padrões para TDD:\\xUnit Patterns\\Design Patterns}\\ \hline
+17 & 08/05/14 & \shortstack[l]{Padrões para TDD:\\Refactoring\\Mastering TDD.} \\ \hline
+18 & 13/05/14 & Conclusões sobre TDD; \\ \hline
+19 & 15/05/14 & Avaliação 2 \\ \hline
+20 & 20/05/14 & Introdução ao reuso de software \\ \hline
+21 & 22/05/14 & \shortstack[l]{Técnicas de reuso de software\\componentes\\atributos de componentes\\composição de componentes} \\ \hline
+22 & 27/05/14 & Frameworks de componentes. \\ \hline
+
+\end{tabular}
+\label{}
+\end{table}	
+	\end{frame}
+	\begin{frame}
+	\frametitle{Programação}
+	
+\begin{table}[htbp]
+\begin{tabular}{|r|r|l|}
+\hline
+\multicolumn{1}{|c|}{Aula} & \multicolumn{1}{c|}{Data} & Assunto \\ \hline
+23 & 29/05/14 & Taxonomia e modelo de componentes \\ \hline
+24 & 03/06/14 & Detalhamento de um framework horizontal \\ \hline
+25 & 05/06/14 & Construção de um framework \\ \hline
+26 & 10/06/14 & Avaliação 3 \\ \hline
+27 & 12/06/14 & Aula de contingência \\ \hline
+28 & 17/06/14 & Aula de contingência \\ \hline
+29 & 24/06/14 & Aula de contingência \\ \hline
+30 & 26/06/14 & Aula de contingência \\ \hline
+31 & 01/07/14 & Aula de contingência \\ \hline
+32 & 03/07/14 & Aula de contingência \\ \hline
+33 & 08/07/14 & Aula de contingência \\ \hline
+\end{tabular}
+\label{}
+\end{table}	
+	
+	
+
+\end{frame}
+	
+\begin{frame}
+		\frametitle{Suporte Instrucional}
+		\begin{itemize}
+			\item http://54.232.82.121/moodle
+					\begin{itemize}
+						\item Comunicados.
+						\item Práticas.
+						\item Slides e código das aulas.
+						\item Trabalhos.
+			
+						\item Notas
+						\end{itemize}		
+		\end{itemize}
+	\end{frame}
+	
+	
+	\begin{frame}				
+		\begin{center}
+			\vspace{1cm}
+			{ \Huge Obrigado!\\}
+			\vspace{0.5cm}
+			%{\normalsize\texttt{\url{http://54.232.82.121/moodle}}}
+		\end{center}
+	\end{frame}	 \end{document}
+
